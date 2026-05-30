@@ -9,6 +9,7 @@ def writeFile(inputList, fileName):
         f.write(item)
         f.write('\n')
     out = ""
+    f = open(fileName)
     for line in f:
         out += line
     return out
@@ -27,8 +28,9 @@ def sortNames(fileName, targetFile):
     for name in names:
         g.write(name)
         g.write('\n')
-    return names
-
+    g = open(targetFile)
+    out = g.read()
+    return out
 
 def highScore( newScore: int):
     #Modify the function such that it adds a new score to the file scores.txt
@@ -49,12 +51,3 @@ def highScore( newScore: int):
         print(sum(nums))
         average = sum(nums) / len(nums)
     return average
-
-# 5
-# 33
-# 64
-# 99
-# 67
-# 98
-# 56
-# 14
