@@ -4,6 +4,8 @@
 
 def writeFile(inputList, fileName):
     #Creates a file of the given name and adds each value from the list to said file with each line being an index from the list.
+    if not inputList:
+        return ''
     f = open(fileName, 'w')
     for item in inputList:
         f.write(item)
